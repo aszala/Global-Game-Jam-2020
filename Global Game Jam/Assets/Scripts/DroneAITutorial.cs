@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DroneAI : MonoBehaviour {
+public class DroneAITutorial : MonoBehaviour {
 
     public GameObject player;
 
