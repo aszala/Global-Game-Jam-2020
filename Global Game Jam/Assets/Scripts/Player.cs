@@ -6,13 +6,13 @@ public class Player : MonoBehaviour
 {
     // Start is called before the first frame update
     public int health;
-    private int maxhealth = health;
+    private int maxhealth;
 
 
 
     void Start()
     {
-        
+        maxhealth = health;
     }
 
     // Update is called once per frame
