@@ -74,19 +74,26 @@ public class Tutorial : MonoBehaviour
         audioSource.Play();
         currentInstruction++;
 
-		if (currentInstruction == 3) {
-			tutorialLocation.SetActive(true);
+        if (currentInstruction == 3)
+        {
+            tutorialLocation.SetActive(true);
             currentInstruction--;
-        } else if (currentInstruction == 4) {
+        }
+        else if (currentInstruction == 4)
+        {
 
             setDroneCount(1);
             Instantiate(drone);
-             StartCoroutine(playClip(currentInstruction));
+            StartCoroutine(playClip(currentInstruction));
 
-        } else if (currentInstruction == 6) {
-                        currentInstruction--;
+        }
+        else if (currentInstruction == 6)
+        {
+            currentInstruction--;
 
-        } else {
+        }
+        else
+        {
             StartCoroutine(playClip(currentInstruction));
 
         }
