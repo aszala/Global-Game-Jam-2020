@@ -270,7 +270,9 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
-  m_Children: []
+  m_Children:
+  - {fileID: 920422251}
+  - {fileID: 1184690118}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2657,6 +2659,83 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 10
+--- !u!1 &920422250
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 920422251}
+  - component: {fileID: 920422253}
+  - component: {fileID: 920422252}
+  m_Layer: 5
+  m_Name: InstructionTips
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &920422251
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 920422250}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 26941427}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -529, y: 296}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &920422252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 920422250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 25
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: 
+--- !u!222 &920422253
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 920422250}
+  m_CullTransparentMesh: 0
 --- !u!1 &922791128
 GameObject:
   m_ObjectHideFlags: 0
@@ -2922,6 +3001,83 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 972899732}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1184690117
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1184690118}
+  - component: {fileID: 1184690120}
+  - component: {fileID: 1184690119}
+  m_Layer: 5
+  m_Name: Subtitles
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1184690118
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184690117}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 26941427}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -298}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1184690119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184690117}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 30
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 229
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: 
+--- !u!222 &1184690120
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184690117}
+  m_CullTransparentMesh: 0
 --- !u!1001 &1192566195
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3264,10 +3420,42 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 9f443d6dd924a9a4d9b99f660b5f15fd, type: 3}
   - {fileID: 8300000, guid: 926a6bb67ae1d6c47b3daf3a813e5fb0, type: 3}
   - {fileID: 8300000, guid: 4013bfc935445b24d85c67aede8942cb, type: 3}
+  subtitleArray:
+  - "\u201CHello Guardian-E27, Welcome to the training simulator.\u201D "
+  - "\u201CHere you will be prepared for your mission.\u201D "
+  - "\u201CWe will start by assessing your movement capabilities, please move to point
+    A\u201D"
+  - "\u201CExcellent.\u201D"
+  - "\u201CNow we will assess your combat capabilities.\u201D "
+  - "\u201CAttack the enemy drone coming toward you.\u201D"
+  - "\u201CSplendid.\u201D"
+  - "\u201CLet\u2019s see if you can handle more.\u201D"
+  - "\u201CDefeat the drones.\u201D "
+  - "\u201CLooks like you missed one. Defeat the final drone.\u201D"
+  - "\u201CIt seems like you have been damaged, here's a repair cube.\u201D"
+  - "\u201CAnalyzing performance...\u201D"
+  - "\u201COur analysis determines that you are sufficient for the mission.\u201D"
+  instructionsArray:
+  - 
+  - 
+  - 'Objective: Use the left thumstick to move to point "A"'
+  - 
+  - 
+  - 'Objective: Hold down the right index trigger and right hand trigger to use lightning.'
+  - 
+  - 
+  - 'Objective: Hold down the left index trigger and left hand trigger to use fire.'
+  - 'Objective: Defeat the last drone'
+  - 'Objective: Point at the repair cube with right index and hold down right hand
+    trigger to use repair cube'
+  - 
+  - Tutorial Complete.
   drone: {fileID: 1328296214327976067, guid: 87ea763b9087e4bb08dca56936445d2e, type: 3}
   player: {fileID: 906020005}
   healthCube: {fileID: 2030433079185437544, guid: 169b129efa55a4f40a4bcff11a413f1f,
     type: 3}
+  Instructions: {fileID: 920422252}
+  Subtitles: {fileID: 1184690119}
 --- !u!4 &1434243973
 Transform:
   m_ObjectHideFlags: 0
