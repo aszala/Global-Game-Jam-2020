@@ -14,7 +14,7 @@ public class PlayerDistToThisOBJ : MonoBehaviour {
     }
 
     void Update() {
-        if (Vector3.Distance(player.transform.position, transform.position) < 0.5f) {
+        if (Vector3.Distance(player.transform.position, transform.position) < 1f) {
             onPlayerReach.Invoke();
 
             Destroy(this.gameObject);
