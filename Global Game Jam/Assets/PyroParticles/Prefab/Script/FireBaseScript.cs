@@ -59,6 +59,7 @@ namespace DigitalRuby.PyroParticles
 
         private void StartParticleSystems()
         {
+            
             foreach (ParticleSystem p in gameObject.GetComponentsInChildren<ParticleSystem>())
             {
                 if (ManualParticleSystems == null || ManualParticleSystems.Length == 0 ||
@@ -79,9 +80,7 @@ namespace DigitalRuby.PyroParticles
 
         protected virtual void Awake()
         {
-            Starting = true;
-            int fireLayer = UnityEngine.LayerMask.NameToLayer("FireLayer");
-            UnityEngine.Physics.IgnoreLayerCollision(fireLayer, fireLayer);
+
         }
 
         protected virtual void Start()
@@ -117,7 +116,11 @@ namespace DigitalRuby.PyroParticles
         protected virtual void Update()
         {
             // reduce the duration
-            Duration -= Time.deltaTime;
+            //Duration -= Time.deltaTime;
+            
+            foreach (ParticleSystem p in gameObject.GetComponentsInChildren<ParticleSystem>()) {
+                p.GetComponent<Renderer>().enabled = true;
+            }
             if (Stopping)
             {
                 // increase the stop time
