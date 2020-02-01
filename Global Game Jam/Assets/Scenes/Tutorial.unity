@@ -3394,7 +3394,7 @@ MonoBehaviour:
   EnableCollision: 1
   CollideLayers:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 0
   MaxFade: 1
   FadeMinDistance: 0.25
   PreferredHeight: 1
