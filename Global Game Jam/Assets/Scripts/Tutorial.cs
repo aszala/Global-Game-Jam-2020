@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Tutorial : MonoBehaviour
-{
+public class Tutorial : MonoBehaviour {
 
     private AudioSource audioSource;
 
@@ -12,7 +11,6 @@ public class Tutorial : MonoBehaviour
     public GameObject tutorialLocation;
     public AudioClip[] audioClips;
 
-
     private int currentInstruction;
     private float timeTillNextLine;
 
@@ -20,8 +18,9 @@ public class Tutorial : MonoBehaviour
 
     public GameObject drone;
 
-    void Start()
-    {
+    public GameObject player;
+
+    void Start() {
         currentInstruction = 0;
         timeTillNextLine = 1f;
         audioSource = GetComponent<AudioSource>();
@@ -31,32 +30,24 @@ public class Tutorial : MonoBehaviour
 
     }
 
-    public void onPlayerReachPointA()
-    {
+    public void onPlayerReachPointA() {
         StartCoroutine(playClip(++currentInstruction));
     }
 
-
-
-
-    public void setDroneCount(int drones)
-    {
+    public void setDroneCount(int drones) {
         droneCount = drones;
         deadDrones = 0;
     }
 
-    public void droneDeath()
-    {
+    public void droneDeath() {
         deadDrones++;
 
-        if (deadDrones == droneCount)
-        {
+        if (deadDrones == droneCount) {
             StartCoroutine(playClip(++currentInstruction));
         }
     }
 
-    public IEnumerator playClip(int index)
-    {
+    public IEnumerator playClip(int index) {
 
         if (index == 0)
         {
@@ -80,12 +71,9 @@ public class Tutorial : MonoBehaviour
             tutorialLocation.SetActive(true);
             currentInstruction--;
         }
-        else if (currentInstruction == 4)
-        {
-            
-
+        else if (currentInstruction == 5) {
             setDroneCount(1);
-           GameObject A = Instantiate(drone);
+            GameObject A = Instantiate(drone);
             A.transform.position = droneSpawnpoint.position;
             StartCoroutine(playClip(currentInstruction));
 
@@ -94,6 +82,33 @@ public class Tutorial : MonoBehaviour
         {
             currentInstruction--;
 
+        } else if (currentInstruction == 8) {
+            setDroneCount(3);
+            GameObject A = Instantiate(drone);
+            GameObject B = Instantiate(drone);
+            GameObject C = Instantiate(drone);
+            
+            A.transform.position = droneSpawnpoint.position;
+            B.transform.position = droneSpawnpoint.position + new Vector3(1, 0, 2);
+            C.transform.position = droneSpawnpoint.position + new Vector3(-1, 0, -1);
+            
+            StartCoroutine(playClip(currentInstruction));
+        }else if (currentInstruction == 9)
+        {
+            currentInstruction--;
+
+        } else if (currentInstruction == 10) {
+            player.GetComponent<Player>().updateHealth(-4);
+
+            setDroneCount(1);
+
+            GameObject A = Instantiate(drone);
+
+            A.transform.position = player.transform.position + new Vector3(6f, 1.5f, 6f);
+
+            StartCoroutine(playClip(currentInstruction));
+        } else if (currentInstruction == 11) {
+            currentInstruction--;
         }
         else
         {

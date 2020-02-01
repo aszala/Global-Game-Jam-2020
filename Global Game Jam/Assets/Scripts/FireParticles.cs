@@ -13,8 +13,6 @@ public class FireParticles : MonoBehaviour
         PSystem = GetComponent<ParticleSystem>();
 
         CollisionEvents = new ParticleCollisionEvent[8];
-
-        print("ashjashdj");
     }
 
 public void OnParticleCollision(GameObject other)

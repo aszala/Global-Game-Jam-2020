@@ -3256,6 +3256,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 926a6bb67ae1d6c47b3daf3a813e5fb0, type: 3}
   - {fileID: 8300000, guid: 4013bfc935445b24d85c67aede8942cb, type: 3}
   drone: {fileID: 1328296214327976067, guid: 87ea763b9087e4bb08dca56936445d2e, type: 3}
+  player: {fileID: 906020005}
 --- !u!4 &1434243973
 Transform:
   m_ObjectHideFlags: 0
