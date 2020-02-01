@@ -10,4 +10,8 @@ public class Tutorial : MonoBehaviour {
     void Update() {
         
     }
+
+    public void onPlayerReachPointA() {
+        print("Yeet");
+    }
 }
