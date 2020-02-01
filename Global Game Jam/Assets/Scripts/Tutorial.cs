@@ -79,12 +79,9 @@ public class Tutorial : MonoBehaviour
         if (currentInstruction < audioClips.Length) {
          StartCoroutine(playClip(currentInstruction));
         
-        } 
-        
-        if (currentInstruction == 3) {
+        } else {
             tutorialLocation.SetActive(true);
-
-        }   
+        }
 
     }
 
