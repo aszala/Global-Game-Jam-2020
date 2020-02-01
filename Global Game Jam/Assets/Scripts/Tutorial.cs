@@ -17,7 +17,7 @@ public class Tutorial : MonoBehaviour
     void Start()
     {
         currentInstruction = 0;
-        timeTillNextLine = 3f;
+        timeTillNextLine = 1f;
         audioSource = GetComponent<AudioSource>();
 
         StartCoroutine(playClip(currentInstruction));
@@ -51,8 +51,6 @@ public class Tutorial : MonoBehaviour
 
     public IEnumerator playClip(int index)
     {
-        Debug.Log("Ganning");
-=
 
         if (index == 0)
         {
