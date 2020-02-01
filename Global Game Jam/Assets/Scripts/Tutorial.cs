@@ -105,6 +105,7 @@ public class Tutorial : MonoBehaviour {
 
             A.transform.position = player.transform.position + new Vector3(6f, 1.5f, 6f);
 
+            currentInstruction--;
         } else if (currentInstruction == 11) {
             currentInstruction--;
         }
