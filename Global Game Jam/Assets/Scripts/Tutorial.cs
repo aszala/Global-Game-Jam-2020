@@ -7,7 +7,10 @@ public class Tutorial : MonoBehaviour
 
     private AudioSource audioSource;
 
+
+    public GameObject tutorialLocation;
     public AudioClip[] audioClips;
+
 
     private int currentInstruction;
     private float timeTillNextLine;
@@ -32,7 +35,7 @@ public class Tutorial : MonoBehaviour
         StartCoroutine(playClip(++currentInstruction));
     }
 
-  
+
 
 
     public void setDroneCount(int drones)
@@ -71,17 +74,15 @@ public class Tutorial : MonoBehaviour
         audioSource.Play();
         currentInstruction++;
 
-        if (currentInstruction == 3) {
+		if (currentInstruction == 2) {
+			tutorialLocation.SetActive(true);
+		} else if (currentInstruction == 3) {
             setDroneCount(1);
             Instantiate(drone);
-            
+
             StartCoroutine(playClip(currentInstruction));
         } else {
             StartCoroutine(playClip(currentInstruction));
-        }
     }
 
-
 }
-
-
