@@ -92,7 +92,6 @@ public class Tutorial : MonoBehaviour {
             B.transform.position = droneSpawnpoint.position + new Vector3(1, 0, 2);
             C.transform.position = droneSpawnpoint.position + new Vector3(-1, 0, -1);
             
-            StartCoroutine(playClip(currentInstruction));
         }else if (currentInstruction == 9)
         {
             currentInstruction--;
@@ -106,7 +105,6 @@ public class Tutorial : MonoBehaviour {
 
             A.transform.position = player.transform.position + new Vector3(6f, 1.5f, 6f);
 
-            StartCoroutine(playClip(currentInstruction));
         } else if (currentInstruction == 11) {
             currentInstruction--;
         }
