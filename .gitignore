@@ -1,3 +1,5 @@
 Global Game Jam/Library
 Global Game Jam/Logs
 Global Game Jam/Temp
+*.csproj
+*.sln
