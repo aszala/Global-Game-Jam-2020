@@ -5,6 +5,8 @@ using UnityEngine;
 public class DroneAITutorial : MonoBehaviour {
 
     private GameObject player;
+    public int DroneHealth;
+    private bool isDead;
 
     void Start() {
         player = GameObject.FindGameObjectWithTag("MainCamera");
@@ -21,5 +23,29 @@ public class DroneAITutorial : MonoBehaviour {
             transform.position = Vector3.MoveTowards(transform.position, player.transform.position, 5 * Time.deltaTime);
 
         }
+    }
+
+    void takeDamage() {
+        if (DroneHealth > 0) {
+            DroneHealth--;
+        } else [
+            isDead = true;
+        DroneDeath();
+
+        ]
+    }
+
+    void DroneDeath() {
+        gameObject.GetComponent<Rigidbody>().useGravity = true;
+        StartCoroutine(DespawnDrone());
+    }
+
+
+    IEnumerator DespawnDrone() {
+        yield return new WaitForSeconds(2);
+
+        Destroy(gameObject);
+    
+
     }
 }
