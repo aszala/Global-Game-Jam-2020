@@ -9,12 +9,14 @@ public class PlayerDistToThisOBJ : MonoBehaviour {
     
     public UnityEvent onPlayerReach;
 
+    public float TriggerDistance;
+
     void Start() {
         player = GameObject.FindGameObjectWithTag("MainCamera");
     }
 
     void Update() {
-        if (Vector3.Distance(player.transform.position, transform.position) < 1f) {
+        if (Vector3.Distance(player.transform.position, transform.position) < TriggerDistance) {
             onPlayerReach.Invoke();
 
             Destroy(this.gameObject);
