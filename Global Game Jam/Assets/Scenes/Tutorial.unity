@@ -460,6 +460,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Lightning_Length: 10
   follow: {fileID: 1433348463}
+  damage: 5
 --- !u!4 &187183043
 Transform:
   m_ObjectHideFlags: 0
@@ -2488,6 +2489,10 @@ PrefabInstance:
       propertyPath: EnableRotation
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 14300000, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
+      propertyPath: m_Radius
+      value: 0.16
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
 --- !u!4 &906019999 stripped
@@ -3271,7 +3276,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1434243971}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 29.44881, y: 1.2401733, z: 18.19069}
+  m_LocalPosition: {x: 29.44881, y: 1.2401733, z: 24.27}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5333,7 +5338,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f9093f19e085664fb008e437b03605a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireforce: 0
+  fireforce: 10
+  damage: 2
 --- !u!1 &1981670925 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3055675866923284040, guid: 5f96aa8a17c9642669adf9d53d283789,
@@ -5567,7 +5573,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 2
+  m_Radius: 4
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2087717574
 GameObject:

@@ -8,6 +8,8 @@ public class FireParticles : MonoBehaviour
     private ParticleCollisionEvent[] CollisionEvents;
     public float fireforce = 0f;
 
+	public int damage;
+
     void Start()
     {
         PSystem = GetComponent<ParticleSystem>();
@@ -15,14 +17,13 @@ public class FireParticles : MonoBehaviour
         CollisionEvents = new ParticleCollisionEvent[8];
     }
 
-public void OnParticleCollision(GameObject other)
-     {
-         int collCount = PSystem.GetSafeCollisionEventSize();
+    public void OnParticleCollision(GameObject other) {
+        int collCount = PSystem.GetSafeCollisionEventSize();
  
-         if (collCount > CollisionEvents.Length)
-             CollisionEvents = new ParticleCollisionEvent[collCount];
+        if (collCount > CollisionEvents.Length)
+            CollisionEvents = new ParticleCollisionEvent[collCount];
  
-         int eventCount = PSystem.GetCollisionEvents(other, CollisionEvents);
+        int eventCount = PSystem.GetCollisionEvents(other, CollisionEvents);
 
         for (int i = 0; i < eventCount; i++)
         {
@@ -33,7 +34,9 @@ public void OnParticleCollision(GameObject other)
                 Vector3 pos = CollisionEvents[i].intersection;
                 Vector3 force = CollisionEvents[i].velocity * fireforce;
                 rb.AddForce(force);
-            }
+
+				CollisionEvents[i].colliderComponent.GetComponent<DroneAI>().takeDamage(damage);
+			}
         }
     }    
 }
