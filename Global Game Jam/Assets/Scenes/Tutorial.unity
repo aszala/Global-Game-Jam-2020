@@ -2937,7 +2937,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c3c43cb718061d4cb9bd77abbb41d9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tutorialLocation: {fileID: 0}
+  tutorialLocation: {fileID: 1748571837}
   audioClips:
   - {fileID: 8300000, guid: f5d41427edd857a47ba1343baacce920, type: 3}
   - {fileID: 8300000, guid: 3c642cba45b59e84b8800312199efae7, type: 3}
