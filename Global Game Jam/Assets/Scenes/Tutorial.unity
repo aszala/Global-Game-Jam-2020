@@ -2834,6 +2834,17 @@ MonoBehaviour:
   - {fileID: 8300000, guid: f5d41427edd857a47ba1343baacce920, type: 3}
   - {fileID: 8300000, guid: 3c642cba45b59e84b8800312199efae7, type: 3}
   - {fileID: 8300000, guid: 9407737c8f091d24f93866f409e5ed17, type: 3}
+  - {fileID: 8300000, guid: 9116d6d618c85844396315a80117a9d1, type: 3}
+  - {fileID: 8300000, guid: c0393aa900635a940b97bfae3c25a9a7, type: 3}
+  - {fileID: 8300000, guid: 88a302ace1c36e14fb744085dd4fd799, type: 3}
+  - {fileID: 8300000, guid: 63a3cd817400cf74eab30866892cfe64, type: 3}
+  - {fileID: 8300000, guid: cdbea3b00aa7e8e4aa86dc11d89304bf, type: 3}
+  - {fileID: 8300000, guid: cc185d3c19013d041ad6ccc0175109b9, type: 3}
+  - {fileID: 8300000, guid: fad4b6b5e60c42c4eb37c4f06ab80a23, type: 3}
+  - {fileID: 8300000, guid: 9f443d6dd924a9a4d9b99f660b5f15fd, type: 3}
+  - {fileID: 8300000, guid: 926a6bb67ae1d6c47b3daf3a813e5fb0, type: 3}
+  - {fileID: 8300000, guid: 4013bfc935445b24d85c67aede8942cb, type: 3}
+  drone: {fileID: 1328296214327976067, guid: 87ea763b9087e4bb08dca56936445d2e, type: 3}
 --- !u!4 &1434243973
 Transform:
   m_ObjectHideFlags: 0
