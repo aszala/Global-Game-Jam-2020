@@ -12,7 +12,7 @@ public class PlayerDistToThisOBJ : MonoBehaviour {
     public float TriggerDistance;
 
     void Start() {
-        player = GameObject.FindGameObjectWithTag("MainCamera");
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     void Update() {
