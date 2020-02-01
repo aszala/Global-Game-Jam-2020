@@ -7,7 +7,10 @@ public class Tutorial : MonoBehaviour
 
     private AudioSource audioSource;
 
+
+    public GameObject tutorialLocation;
     public AudioClip[] audioClips;
+    
 
     private int currentInstruction;
     private float timeTillNextLine;
@@ -75,8 +78,13 @@ public class Tutorial : MonoBehaviour
     public void playNextClip() {
         if (currentInstruction < audioClips.Length) {
          StartCoroutine(playClip(currentInstruction));
+        
+        } 
+        
+        if (currentInstruction == 3) {
+            tutorialLocation.SetActive(true);
 
-        }
+        }   
 
     }
 
