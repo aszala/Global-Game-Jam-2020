@@ -20,6 +20,8 @@ public class Tutorial : MonoBehaviour {
 
     public GameObject player;
 
+    public GameObject healthCube;
+
     void Start() {
         currentInstruction = 0;
         timeTillNextLine = 1f;
@@ -97,7 +99,7 @@ public class Tutorial : MonoBehaviour {
             currentInstruction--;
 
         } else if (currentInstruction == 10) {
-            player.GetComponent<Player>().updateHealth(-4);
+            player.GetComponent<Player>().updateHealth(-1);
 
             setDroneCount(1);
 
@@ -105,8 +107,16 @@ public class Tutorial : MonoBehaviour {
 
             A.transform.position = player.transform.position + new Vector3(6f, 1.5f, 6f);
 
+            currentInstruction--;
         } else if (currentInstruction == 11) {
             currentInstruction--;
+            
+            GameObject C = Instantiate(healthCube);
+            C.transform.position = transform.position;
+
+            if (player.GetComponent<Player>().health == 10) {
+                StartCoroutine(playClip(++currentInstruction));
+            }
         }
         else
         {
