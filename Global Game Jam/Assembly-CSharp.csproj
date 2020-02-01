@@ -392,8 +392,6 @@
     <Compile Include="Assets\Oculus\Spatializer\scripts\ONSPPropagationSettings.cs" />
     <Compile Include="Assets\Oculus\Spatializer\scripts\ONSPSettings.cs" />
     <Compile Include="Assets\Oculus\Spatializer\scripts\ONSPVersion.cs" />
-    <Compile Include="Assets\PyroParticles\Demo\DemoScript.cs" />
-    <Compile Include="Assets\PyroParticles\Demo\DemoScriptEditor.cs" />
     <Compile Include="Assets\PyroParticles\Prefab\Script\FireBaseScript.cs" />
     <Compile Include="Assets\PyroParticles\Prefab\Script\FireCollisionForwardScript.cs" />
     <Compile Include="Assets\PyroParticles\Prefab\Script\FireConstantBaseScript.cs" />
