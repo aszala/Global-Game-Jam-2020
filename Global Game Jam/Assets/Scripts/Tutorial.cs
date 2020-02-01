@@ -1,8 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class Tutorial : MonoBehaviour {
+public class Tutorial : MonoBehaviour
+{
 
     private AudioSource audioSource;
 
@@ -10,6 +12,9 @@ public class Tutorial : MonoBehaviour {
 
     public GameObject tutorialLocation;
     public AudioClip[] audioClips;
+
+    public string[] subtitleArray;
+    public string[] instructionsArray;
 
     private int currentInstruction;
     private float timeTillNextLine;
@@ -22,34 +27,45 @@ public class Tutorial : MonoBehaviour {
 
     public GameObject healthCube;
 
-    void Start() {
+    public Text Instructions;
+
+    public Text Subtitles;
+
+    void Start()
+    {
         currentInstruction = 0;
         timeTillNextLine = 1f;
         audioSource = GetComponent<AudioSource>();
 
         StartCoroutine(playClip(currentInstruction));
+        Subtitles.text = subtitleArray[currentInstruction];
 
 
     }
 
-    public void onPlayerReachPointA() {
+    public void onPlayerReachPointA()
+    {
         StartCoroutine(playClip(++currentInstruction));
     }
 
-    public void setDroneCount(int drones) {
+    public void setDroneCount(int drones)
+    {
         droneCount = drones;
         deadDrones = 0;
     }
 
-    public void droneDeath() {
+    public void droneDeath()
+    {
         deadDrones++;
 
-        if (deadDrones == droneCount) {
+        if (deadDrones == droneCount)
+        {
             StartCoroutine(playClip(++currentInstruction));
         }
     }
 
-    public IEnumerator playClip(int index) {
+    public IEnumerator playClip(int index)
+    {
 
         if (index == 0)
         {
@@ -66,6 +82,9 @@ public class Tutorial : MonoBehaviour {
         audioSource.clip = audioClips[index];
 
         audioSource.Play();
+        Subtitles.text = subtitleArray[currentInstruction];
+        Instructions.text = instructionsArray[currentInstruction];
+
         currentInstruction++;
 
         if (currentInstruction == 3)
@@ -73,7 +92,8 @@ public class Tutorial : MonoBehaviour {
             tutorialLocation.SetActive(true);
             currentInstruction--;
         }
-        else if (currentInstruction == 5) {
+        else if (currentInstruction == 5)
+        {
             setDroneCount(1);
             GameObject A = Instantiate(drone);
             A.transform.position = droneSpawnpoint.position;
@@ -84,21 +104,26 @@ public class Tutorial : MonoBehaviour {
         {
             currentInstruction--;
 
-        } else if (currentInstruction == 8) {
+        }
+        else if (currentInstruction == 8)
+        {
             setDroneCount(3);
             GameObject A = Instantiate(drone);
             GameObject B = Instantiate(drone);
             GameObject C = Instantiate(drone);
-            
+
             A.transform.position = droneSpawnpoint.position;
             B.transform.position = droneSpawnpoint.position + new Vector3(1, 0, 2);
             C.transform.position = droneSpawnpoint.position + new Vector3(-1, 0, -1);
-            
-        }else if (currentInstruction == 9)
+
+        }
+        else if (currentInstruction == 9)
         {
             currentInstruction--;
 
-        } else if (currentInstruction == 10) {
+        }
+        else if (currentInstruction == 10)
+        {
             player.GetComponent<Player>().updateHealth(-1);
 
             setDroneCount(1);
@@ -108,13 +133,16 @@ public class Tutorial : MonoBehaviour {
             A.transform.position = player.transform.position + new Vector3(6f, 1.5f, 6f);
 
             currentInstruction--;
-        } else if (currentInstruction == 11) {
+        }
+        else if (currentInstruction == 11)
+        {
             currentInstruction--;
-            
+
             GameObject C = Instantiate(healthCube);
             C.transform.position = transform.position;
 
-            if (player.GetComponent<Player>().health == 10) {
+            if (player.GetComponent<Player>().health == 10)
+            {
                 StartCoroutine(playClip(++currentInstruction));
             }
         }
