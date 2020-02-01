@@ -8,8 +8,7 @@ public class Tutorial : MonoBehaviour
     private AudioSource audioSource;
 
     public Transform droneSpawnpoint;
-    public Transform droneTransform;
-    public Transform playerObject;
+
     public GameObject tutorialLocation;
     public AudioClip[] audioClips;
 
@@ -86,9 +85,8 @@ public class Tutorial : MonoBehaviour
             
 
             setDroneCount(1);
-            droneTransform.rotation = Quaternion.LookRotation(playerObject.position - droneTransform.position);
-            droneTransform.eulerAngles = new Vector3(270.0f, transform.eulerAngles.y + 180, 0f);
-            Instantiate(drone, droneSpawnpoint.position, droneTransform.rotation);
+           GameObject A = Instantiate(drone);
+            A.transform.position = droneSpawnpoint.position;
             StartCoroutine(playClip(currentInstruction));
 
         }

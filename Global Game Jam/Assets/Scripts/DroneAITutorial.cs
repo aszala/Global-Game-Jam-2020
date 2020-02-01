@@ -4,17 +4,22 @@ using UnityEngine;
 
 public class DroneAITutorial : MonoBehaviour {
 
-    public GameObject player;
+    private GameObject player;
 
     void Start() {
-        
+        player = GameObject.FindGameObjectWithTag("MainCamera");
     }
 
     void Update() {
         transform.LookAt(player.transform);
 
+
+
+
+
         if (Vector3.Distance(transform.position, player.transform.position) > 5f) {
-            transform.position += 5f * transform.forward * Time.deltaTime;
+            transform.position = Vector3.MoveTowards(transform.position, player.transform.position, 5 * Time.deltaTime);
+
         }
     }
 }
