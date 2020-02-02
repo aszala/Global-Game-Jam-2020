@@ -2,25 +2,41 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerHitbox : MonoBehaviour {
+public class PlayerHitbox : MonoBehaviour
+{
 
-	public Player player;
+    public Player player;
 
-    void Start() {
-        
+
+
+    public int projectileDamage;
+
+
+
+    void Start()
+    {
+      
+
+
     }
 
-	void OnCollisionEnter(Collision collision) {
-		if (collision.transform.tag.Contains("Enemy")) {
-			player.updateHealth(-1);
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.transform.tag.Contains("Enemy"))
+        {
+          
 
-			if (collision.transform.name.Contains("Proj")) {
-				Destroy(collision.transform.gameObject);
-			}
-		}
-	}
+            player.updateHealth(projectileDamage);
 
-	void Update() {
-        
+            if (collision.transform.name.Contains("Proj"))
+            {
+                Destroy(collision.transform.gameObject);
+            }
+        }
+    }
+
+    void Update()
+    {
+
     }
 }
