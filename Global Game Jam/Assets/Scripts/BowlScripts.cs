@@ -51,9 +51,10 @@ public class BowlScripts : MonoBehaviour
         {   
             
             if (addObject) {
-                a = Instantiate(energyOrbs, this.transform.position + new Vector3(0, 2, 0), this.transform.rotation);
+                Instantiate(energyOrbs, this.transform.position + new Vector3(0, 2, 0), this.transform.rotation);
                 addObject = false;
 
+                numberofOrbsPlaced++;
             } else {
 
             }
