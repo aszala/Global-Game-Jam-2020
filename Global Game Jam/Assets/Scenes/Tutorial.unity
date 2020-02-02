@@ -1472,6 +1472,17 @@ PrefabInstance:
       propertyPath: audioClips.Array.data[11]
       value: 
       objectReference: {fileID: 8300000, guid: 4013bfc935445b24d85c67aede8942cb, type: 3}
+    - target: {fileID: 4309190038956208588, guid: 33621e06cca6043c992f85df3a52c614,
+        type: 3}
+      propertyPath: instructionsArray.Array.data[8]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4309190038956208588, guid: 33621e06cca6043c992f85df3a52c614,
+        type: 3}
+      propertyPath: instructionsArray.Array.data[7]
+      value: 'Objective: Hold down the left index trigger and left hand trigger to
+        use fire.'
+      objectReference: {fileID: 0}
     - target: {fileID: 4309190038956208589, guid: 33621e06cca6043c992f85df3a52c614,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1889,6 +1900,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3956496433346171831, guid: ce816f2e6abb0504092c23ed9b970dfd,
+        type: 3}
+      propertyPath: redFlash
+      value: 
+      objectReference: {fileID: 8929368150933895734}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce816f2e6abb0504092c23ed9b970dfd, type: 3}
 --- !u!1 &906020005 stripped
@@ -4027,15 +4043,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
-    - target: {fileID: 8929368151851105625, guid: 5ad4c1d6bf105904099697b29f428c1b,
-        type: 3}
-      propertyPath: m_FontData.m_HorizontalOverflow
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8929368151851105630, guid: 5ad4c1d6bf105904099697b29f428c1b,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 475.13
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ad4c1d6bf105904099697b29f428c1b, type: 3}
+--- !u!114 &8929368150933895734 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8550782614485308512, guid: 5ad4c1d6bf105904099697b29f428c1b,
+    type: 3}
+  m_PrefabInstance: {fileID: 8929368150933895733}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
