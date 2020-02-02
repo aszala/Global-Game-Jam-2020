@@ -13,57 +13,69 @@ public class BowlScripts : MonoBehaviour
     private int numberofBowls;
     private int numberofOrbsPlaced;
 
-    public Text objectives;
+    public Canvas ObjectivesCanvas;
+    private Text objectives;
 
-    private bool turnoffText = false;
+    private bool addObject;
+
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
+        objectives = ObjectivesCanvas.GetComponentInChildren<Text>();
+        objectives.text = "Objective: Restore power by placing hands on energy sinks.";
+
+        StartCoroutine(TurnTextOff());
+
+
+
         detectBowlTags = GameObject.FindGameObjectsWithTag("DontDestroy");
         numberofBowls = detectBowlTags.Length;
 
-        objectives.text = "Objective: Restore power by placing hands on energy sinks.";
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!turnoffText) {
-
-            StartCoroutine(TurnTextOff());
-        }
-        if (numberofBowls == numberofOrbsPlaced)
-        {
-
-            // some cool animations go here idk
-
-   
-
-            StartCoroutine(endGame());
-        }
+        print(numberofOrbsPlaced);
+      
+       
     }
 
+  
     public void placeOrbOnBowl()
     {
+        print(numberofOrbsPlaced);
         if (numberofOrbsPlaced < numberofBowls)
-        {
-            print("lin");
-            energyOrbs.GetComponent<PlayerDistToThisOBJ>().enabled = false;
-            Instantiate(energyOrbs, this.transform.position + new Vector3(0, 2, 0), this.transform.rotation);
+        {   
+            
+            if (addObject) {
+                a = Instantiate(energyOrbs, this.transform.position + new Vector3(0, 2, 0), this.transform.rotation);
+                addObject = false;
 
-            numberofOrbsPlaced++;
+            } else {
+
+            }
+
+
+
+
+
         }
+
+
     }
-    
-    IEnumerator endGame() {
+
+    IEnumerator endGame()
+    {
         yield return new WaitForSeconds(5);
 
         objectives.text = "OBJECTIVE COMPLETE: POWER RESTORED TO UNIT-173";
         StartCoroutine(TerminalKillsYou());
     }
-    IEnumerator TerminalKillsYou() {
+    IEnumerator TerminalKillsYou()
+    {
         yield return new WaitForSeconds(10);
         objectives.text = "";
 
@@ -73,14 +85,15 @@ public class BowlScripts : MonoBehaviour
 
     }
 
-    IEnumerator TurnTextOff() {
-        yield return new WaitForSeconds(5);
+    IEnumerator TurnTextOff()
+    {
+        yield return new WaitForSeconds(10);
 
-        turnoffText = true;
+
 
         objectives.text = "";
     }
-    
 
-  
+
+
 }

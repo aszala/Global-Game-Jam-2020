@@ -122,7 +122,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  TriggerDistance: 0.5
+  TriggerDistance: 2
 --- !u!65 &-7825011919822411577
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -149,4 +149,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   energyOrbs: {fileID: 4047840383572921077, guid: 47cea2644bf72a346ad2c4bace67c120,
+    type: 3}
+  ObjectivesCanvas: {fileID: 8929368150923996615, guid: 5ad4c1d6bf105904099697b29f428c1b,
     type: 3}
