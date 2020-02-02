@@ -82,8 +82,11 @@ public class Tutorial : MonoBehaviour
 
         }
         audioSource.clip = audioClips[index];
+        if (!spawnHealthCube)
+        {
+            audioSource.Play();
+        }
 
-        audioSource.Play();
         Subtitles.text = subtitleArray[currentInstruction];
         Instructions.text = instructionsArray[currentInstruction];
 
@@ -136,32 +139,32 @@ public class Tutorial : MonoBehaviour
 
             currentInstruction--;
         }
-        else if (currentInstruction == 11)
+        else if (currentInstruction == 10)
         {
-            print("health is 10, currentInstruction is " + currentInstruction);
-            currentInstruction--;
-            StartCoroutine(playClip(currentInstruction));
-            
 
-            print(player.GetComponent<Player>().health);
+
+
             if (player.GetComponent<Player>().health == 10)
             {
 
-                print("health is 10, currentInstruction is " + currentInstruction);
                 currentInstruction++;
                 StartCoroutine(playClip(currentInstruction));
 
             }
             else
             {
+
                 if (spawnHealthCube)
                 {
                     GameObject C = Instantiate(healthCube);
                     C.transform.position = transform.position;
                     spawnHealthCube = false;
+                    currentInstruction--;
+                    StartCoroutine(playClip(currentInstruction));
+
                 }
 
-                StartCoroutine(playClip(currentInstruction));
+
             }
 
 
