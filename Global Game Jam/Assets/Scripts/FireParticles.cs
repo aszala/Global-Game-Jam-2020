@@ -27,7 +27,7 @@ public class FireParticles : MonoBehaviour
 
         for (int i = 0; i < eventCount; i++)
         {
-            Rigidbody rb = CollisionEvents[i].colliderComponent.GetComponent<Rigidbody>();
+            Rigidbody rb = other.GetComponent<Rigidbody>();
 
             if (rb && CollisionEvents[i].colliderComponent.tag.Contains("Enemy"))
             {
@@ -35,7 +35,7 @@ public class FireParticles : MonoBehaviour
                 Vector3 force = CollisionEvents[i].velocity * fireforce;
                 rb.AddForce(force);
 
-				CollisionEvents[i].colliderComponent.GetComponent<DroneAI>().takeDamage(damage);
+				other.GetComponent<DroneAI>().takeDamage(damage);
 			}
         }
     }    
