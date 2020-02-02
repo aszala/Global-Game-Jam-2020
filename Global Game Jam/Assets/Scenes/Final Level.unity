@@ -491,7 +491,7 @@ PrefabInstance:
     - target: {fileID: 8301845630154918740, guid: a5091b4023d224acfa5f3e19151836ba,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.48
+      value: 2.27
       objectReference: {fileID: 0}
     - target: {fileID: 8301845630154918740, guid: a5091b4023d224acfa5f3e19151836ba,
         type: 3}
@@ -552,6 +552,16 @@ PrefabInstance:
         type: 3}
       propertyPath: onPlayerReach.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: NameItWhatever
+      objectReference: {fileID: 0}
+    - target: {fileID: 8301845630154918743, guid: a5091b4023d224acfa5f3e19151836ba,
+        type: 3}
+      propertyPath: TriggerDistance
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8301845631371978623, guid: a5091b4023d224acfa5f3e19151836ba,
+        type: 3}
+      propertyPath: m_Text
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a5091b4023d224acfa5f3e19151836ba, type: 3}
@@ -2601,6 +2611,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BowlPrefab (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 6313424791132181435, guid: 06f0fd801faef40ce9b397cf7dc00fdc,
+        type: 3}
+      propertyPath: troller
+      value: 
+      objectReference: {fileID: 1951140652}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 06f0fd801faef40ce9b397cf7dc00fdc, type: 3}
 --- !u!4 &1255878048 stripped
@@ -3847,6 +3862,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectives: {fileID: 1919370439}
+  troller: {fileID: 1951140652}
 --- !u!4 &1838522820
 Transform:
   m_ObjectHideFlags: 0
@@ -4213,6 +4229,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 334d02345cc1cb44baff16df3273a9b7,
     type: 3}
   m_PrefabInstance: {fileID: 1923139017}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1951140652 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8301845630154918742, guid: a5091b4023d224acfa5f3e19151836ba,
+    type: 3}
+  m_PrefabInstance: {fileID: 429708873}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1969147057
 PrefabInstance:

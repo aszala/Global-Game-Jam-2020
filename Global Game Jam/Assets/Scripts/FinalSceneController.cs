@@ -8,6 +8,7 @@ public class FinalSceneController : MonoBehaviour
 {
 
     public Text objectives;
+    public GameObject troller;
 
     private bool gameEndBool = true;
     // Start is called before the first frame update
@@ -32,6 +33,8 @@ public class FinalSceneController : MonoBehaviour
 
     IEnumerator endGame()
     {
+        troller.SetActive(true);
+
         yield return new WaitForSeconds(5);
 
         gameEndBool = false;
@@ -48,8 +51,7 @@ public class FinalSceneController : MonoBehaviour
 
         // terminal pops up and completely destroys you - lasts for as long as the video and fade to black
         // Voice says congrats Guardian-e27, you have failed your objective, Initiating Guardian-e28
-
-        SceneManager.UnloadScene("Final Level");
+        SceneManager.LoadScene("Tutorial");
     }
 
     IEnumerator TurnTextOff()
@@ -65,3 +67,4 @@ public class FinalSceneController : MonoBehaviour
 
 
 }
+

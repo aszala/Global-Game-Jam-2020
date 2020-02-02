@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f2dec8a56b5b42eaa779b073b10ad75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  troller: {fileID: 8301845630154918742, guid: a5091b4023d224acfa5f3e19151836ba, type: 3}
+  troller: {fileID: 0}
   energyOrbs: {fileID: 4047840383572921077, guid: 47cea2644bf72a346ad2c4bace67c120,
     type: 3}
   ObjectivesCanvas: {fileID: 8929368150923996615, guid: 5ad4c1d6bf105904099697b29f428c1b,

@@ -72,12 +72,15 @@ public class BowlScripts : MonoBehaviour
 
     IEnumerator endGame()
     {
+        troller.SetActive(true);
+        print("asdmlk");
         yield return new WaitForSeconds(5);
+
+        
 
         objectives.text = "OBJECTIVE COMPLETE: POWER RESTORED TO UNIT-173";
         
 
-        troller.SetActive(true); 
 
     }
 
