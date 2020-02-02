@@ -33,7 +33,7 @@ public class FireParticles : MonoBehaviour
             if (rb && CollisionEvents[i].colliderComponent.tag.Contains("Enemy"))
             {
                 Vector3 pos = CollisionEvents[i].intersection;
-                Vector3 force = CollisionEvents[i].velocity * fireforce / 2;
+                Vector3 force = CollisionEvents[i].velocity * fireforce / 10;
                 rb.AddForce(force);
 
 				other.GetComponent<DroneAI>().takeDamage(damage);
