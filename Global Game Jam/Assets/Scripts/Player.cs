@@ -10,6 +10,8 @@ public class Player : MonoBehaviour
     public Image redFlash;
     private Color color;
 
+    private float timeTracker;
+
 
 
     void Start()
@@ -23,7 +25,13 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+        timeTracker += Time.deltaTime;
+        if (timeTracker > 3)
+        {
+            updateHealth(1);
+        } 
 
+        
     }
 
 
@@ -32,24 +40,36 @@ public class Player : MonoBehaviour
         if (health + deltaHealth <= maxhealth && health >= 0)
         {
             health += deltaHealth;
+
+            if (deltaHealth > 0 && health < maxhealth)
+            {
+                color.a -= .3f;
+                redFlash.color = color;
+                timeTracker = 0;
+            }
+            else if (deltaHealth < 0)
+            {
+                timeTracker = 0f;
+                color.a += .10f;
+                redFlash.color = color;
+
+            } else if (health == maxhealth) {
+                timeTracker = 0;
+                color.a = 0f;
+                redFlash.color = color;
+
+            }
+
+
         }
 
-        color.a += .10f;
-        redFlash.color = color;
-        StartCoroutine(healthFadeOut());
 
 
         print(health);
 
-    }
-
-     IEnumerator healthFadeOut() {
-        yield return new WaitForSeconds(.1f);
-
-        color.a -= .05f;
-        
-        redFlash.color = color;
 
     }
+
+
 
 }
