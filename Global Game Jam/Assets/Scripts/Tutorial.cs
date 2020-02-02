@@ -143,7 +143,8 @@ public class Tutorial : MonoBehaviour
 
             if (player.GetComponent<Player>().health == 10)
             {
-                StartCoroutine(playClip(++currentInstruction));
+				currentInstruction = 12;
+                StartCoroutine(playClip(currentInstruction));
             }
         }
         else
