@@ -16,7 +16,7 @@ public class BowlScripts : MonoBehaviour
     public Canvas ObjectivesCanvas;
     private Text objectives;
 
-    private bool addObject = true;;
+    private bool addObject = true;
 
 
     // Start is called before the first frame update
