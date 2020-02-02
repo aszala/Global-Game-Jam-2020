@@ -6009,77 +6009,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ScreenFlash
       objectReference: {fileID: 0}
-    - target: {fileID: 4175652782743234060, guid: 6580ed273c735463a8ef8cd9d9d5157e,
+    - target: {fileID: 4821874724999402071, guid: 6580ed273c735463a8ef8cd9d9d5157e,
         type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4175652782743234060, guid: 6580ed273c735463a8ef8cd9d9d5157e,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 0.2028302
-      objectReference: {fileID: 0}
-    - target: {fileID: 4175652782743234060, guid: 6580ed273c735463a8ef8cd9d9d5157e,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 0.2028302
-      objectReference: {fileID: 0}
-    - target: {fileID: 4175652782743234060, guid: 6580ed273c735463a8ef8cd9d9d5157e,
-        type: 3}
-      propertyPath: m_FillCenter
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4175652782743234060, guid: 6580ed273c735463a8ef8cd9d9d5157e,
-        type: 3}
-      propertyPath: m_Type
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4175652782743234060, guid: 6580ed273c735463a8ef8cd9d9d5157e,
-        type: 3}
-      propertyPath: m_RaycastTarget
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4175652782743234060, guid: 6580ed273c735463a8ef8cd9d9d5157e,
-        type: 3}
-      propertyPath: m_FillMethod
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4175652782743234060, guid: 6580ed273c735463a8ef8cd9d9d5157e,
-        type: 3}
-      propertyPath: m_FillOrigin
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4175652782743234060, guid: 6580ed273c735463a8ef8cd9d9d5157e,
-        type: 3}
-      propertyPath: m_PreserveAspect
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4175652782743234060, guid: 6580ed273c735463a8ef8cd9d9d5157e,
-        type: 3}
-      propertyPath: m_UseSpriteMesh
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4175652782743234060, guid: 6580ed273c735463a8ef8cd9d9d5157e,
-        type: 3}
-      propertyPath: m_Sprite
+      propertyPath: m_Camera
       value: 
-      objectReference: {fileID: 21300000, guid: cef9650b587e0484ab827ea9d91d2aa1,
-        type: 3}
-    - target: {fileID: 4175652782743234060, guid: 6580ed273c735463a8ef8cd9d9d5157e,
-        type: 3}
-      propertyPath: m_FillAmount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4175652782743234060, guid: 6580ed273c735463a8ef8cd9d9d5157e,
-        type: 3}
-      propertyPath: m_Color.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7098387555330457609, guid: 6580ed273c735463a8ef8cd9d9d5157e,
-        type: 3}
-      propertyPath: m_CullTransparentMesh
-      value: 0
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2079205903}
     - target: {fileID: 7347755588611311363, guid: 6580ed273c735463a8ef8cd9d9d5157e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6514,6 +6448,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87ea763b9087e4bb08dca56936445d2e, type: 3}
+--- !u!20 &2079205903 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 1399197511, guid: ce816f2e6abb0504092c23ed9b970dfd,
+    type: 3}
+  m_PrefabInstance: {fileID: 906019998}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2083723486
 PrefabInstance:
   m_ObjectHideFlags: 0
