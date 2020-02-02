@@ -192,7 +192,8 @@ MonoBehaviour:
   onPlayerReach:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 3956496433346171831, guid: ce816f2e6abb0504092c23ed9b970dfd,
+          type: 3}
         m_MethodName: updateHealth
         m_Mode: 3
         m_Arguments:
@@ -203,7 +204,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  TriggerDistance: 0.1
+  TriggerDistance: 0.5
 --- !u!1 &2030433079732422222
 GameObject:
   m_ObjectHideFlags: 0

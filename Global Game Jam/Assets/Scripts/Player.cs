@@ -18,15 +18,17 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
-    public void updateHealth(int deltaHealth) {
-        if (health + deltaHealth <= maxhealth) {
-  health += deltaHealth;
+    public void updateHealth(int deltaHealth)
+    {
+        if (health + deltaHealth <= maxhealth)
+        {
+            health += deltaHealth;
         }
+
       
-        print(health);
     }
 
 }
