@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -7,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class BowlScripts : MonoBehaviour
 {
+
+    public GameObject troller;
 
     public GameObject energyOrbs;
 
@@ -75,18 +76,9 @@ public class BowlScripts : MonoBehaviour
         yield return new WaitForSeconds(5);
 
         objectives.text = "OBJECTIVE COMPLETE: POWER RESTORED TO UNIT-173";
-        StartCoroutine(TerminalKillsYou());
-    }
-    IEnumerator TerminalKillsYou()
-    {
-        yield return new WaitForSeconds(10);
-        objectives.text = "";
+        
 
-
-
-
-        // terminal pops up and completely destroys you - lasts for as long as the video and fade to black
-        // Voice says congrats Guardian-e27, you have failed your objective, Initiating Guardian-e28
+        troller.SetActive(true); 
 
     }
 
