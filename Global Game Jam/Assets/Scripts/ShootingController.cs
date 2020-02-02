@@ -22,9 +22,9 @@ public class ShootingController : MonoBehaviour {
 			em.enabled = true;
 		} else {
 			var em = leftWeapon.transform.GetChild(0).GetComponent<ParticleSystem>().emission;
-			em.enabled = true;
+			em.enabled = false;
 			em = leftWeapon.transform.GetChild(1).GetComponent<ParticleSystem>().emission;
-			em.enabled = true;
+			em.enabled = false;
 		}
 
         float indexR = OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger, OVRInput.Controller.RTouch);
