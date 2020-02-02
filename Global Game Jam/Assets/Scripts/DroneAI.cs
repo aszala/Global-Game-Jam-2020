@@ -10,15 +10,29 @@ public class DroneAI : MonoBehaviour {
     public int DroneHealth;
     private bool isDead;
 
+	public GameObject projectile;
+
     void Start() {
         player = GameObject.FindGameObjectWithTag("MainCamera");
-        tutorialController = GameObject.Find("Tutorial Contoller").GetComponent<Tutorial>();
+
+		try {
+			tutorialController = GameObject.Find("Tutorial Contoller").GetComponent<Tutorial>();
+		} catch {
+
+		}
     }
 
     void Update() {
-
         if (!isDead) {
             transform.LookAt(player.transform);
+
+			if (Random.value < 0.001f) {
+				GameObject pro = Instantiate(projectile);
+				pro.transform.position = transform.position + (transform.forward * 0.5f);
+				pro.transform.LookAt(player.transform);
+
+				pro.GetComponent<Rigidbody>().AddForce(transform.forward * 20);
+			}
 
             if (Vector3.Distance(transform.position, player.transform.position) > 5f) {
                 transform.position = Vector3.MoveTowards(transform.position, player.transform.position, 5 * Time.deltaTime);
@@ -26,7 +40,9 @@ public class DroneAI : MonoBehaviour {
             
             if (DroneHealth <= 0) {
                 isDead = true;
-                tutorialController.droneDeath();
+
+				if (tutorialController != null)
+					tutorialController.droneDeath();
                 
                 gameObject.GetComponent<Rigidbody>().useGravity = true;
 
