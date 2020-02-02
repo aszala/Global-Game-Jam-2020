@@ -82,7 +82,7 @@ public class Tutorial : MonoBehaviour
 
         }
         audioSource.clip = audioClips[index];
-        if (!spawnHealthCube)
+        if (spawnHealthCube)
         {
             audioSource.Play();
         }
@@ -146,8 +146,8 @@ public class Tutorial : MonoBehaviour
 
             if (player.GetComponent<Player>().health == 10)
             {
-
-                currentInstruction++;
+                audioSource.Play();
+                spawnHealthCube = true;
                 StartCoroutine(playClip(currentInstruction));
 
             }
@@ -159,10 +159,12 @@ public class Tutorial : MonoBehaviour
                     GameObject C = Instantiate(healthCube);
                     C.transform.position = transform.position;
                     spawnHealthCube = false;
-                    currentInstruction--;
-                    StartCoroutine(playClip(currentInstruction));
 
                 }
+                currentInstruction--;
+                print(currentInstruction);
+                StartCoroutine(playClip(currentInstruction));
+
 
 
             }
