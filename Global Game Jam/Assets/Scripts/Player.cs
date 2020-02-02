@@ -65,7 +65,7 @@ public class Player : MonoBehaviour
 
 
 
-        print(health);
+        
 
 
     }

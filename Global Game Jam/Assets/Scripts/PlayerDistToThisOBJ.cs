@@ -16,7 +16,9 @@ public class PlayerDistToThisOBJ : MonoBehaviour {
     }
 
     void Update() {
+        print("Hose");
         if (Vector3.Distance(player.transform.position, transform.position) < TriggerDistance) {
+
             onPlayerReach.Invoke();
 
             Destroy(this.gameObject);
