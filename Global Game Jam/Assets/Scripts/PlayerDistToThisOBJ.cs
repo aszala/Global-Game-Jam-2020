@@ -20,10 +20,13 @@ public class PlayerDistToThisOBJ : MonoBehaviour {
         
         if (Vector3.Distance(player.transform.position, transform.position) < TriggerDistance) {
             onPlayerReach.Invoke();
-            // if (this.gameObject.tag != "DontDestroy") {
+            print("hello");
+            if (this.gameObject.tag != "DontDestroy") {
             Destroy(gameObject);
+            
 
-            // }
+
+            } 
         }
     }
 }
