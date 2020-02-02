@@ -16,12 +16,14 @@ public class PlayerDistToThisOBJ : MonoBehaviour {
     }
 
     void Update() {
-        print("Hose");
+        
+        
         if (Vector3.Distance(player.transform.position, transform.position) < TriggerDistance) {
-
             onPlayerReach.Invoke();
+            // if (this.gameObject.tag != "DontDestroy") {
+            Destroy(gameObject);
 
-            Destroy(this.gameObject);
+            // }
         }
     }
 }
