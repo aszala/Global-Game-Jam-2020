@@ -385,6 +385,7 @@
      <Compile Include="Assets\Scripts\ArrowBob.cs" />
      <Compile Include="Assets\Scripts\BowlScripts.cs" />
      <Compile Include="Assets\Scripts\DroneAI.cs" />
+     <Compile Include="Assets\Scripts\FinalSceneController.cs" />
      <Compile Include="Assets\Scripts\FinishLevel1.cs" />
      <Compile Include="Assets\Scripts\FireParticles.cs" />
      <Compile Include="Assets\Scripts\LightingController.cs" />
