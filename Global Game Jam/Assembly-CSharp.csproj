@@ -405,6 +405,7 @@
     <Compile Include="Assets\Scripts\LightingController.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\PlayerDistToThisOBJ.cs" />
+    <Compile Include="Assets\Scripts\PlayerHitbox.cs" />
     <Compile Include="Assets\Scripts\ShootingController.cs" />
     <Compile Include="Assets\Scripts\Tutorial.cs" />
     <Compile Include="Assets\TurnTheGameOn\Arrow WayPointer\Demo Scene\Scripts\CharacterControllerThirdPerson.cs" />

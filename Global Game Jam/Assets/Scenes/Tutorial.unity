@@ -1757,7 +1757,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 24.144001, y: -159.378, z: -147.391}
 --- !u!1 &898602018
 GameObject:
@@ -2278,18 +2278,174 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c3c43cb718061d4cb9bd77abbb41d9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1508972316 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1022089042146692830, guid: 0242aa8515b4bc947a945a5c6df83ee9,
+  droneSpawnpoint: {fileID: 2782896}
+  tutorialLocation: {fileID: 1748571837}
+  audioClips:
+  - {fileID: 8300000, guid: f5d41427edd857a47ba1343baacce920, type: 3}
+  - {fileID: 8300000, guid: 3c642cba45b59e84b8800312199efae7, type: 3}
+  - {fileID: 8300000, guid: 9407737c8f091d24f93866f409e5ed17, type: 3}
+  - {fileID: 8300000, guid: 9116d6d618c85844396315a80117a9d1, type: 3}
+  - {fileID: 8300000, guid: c0393aa900635a940b97bfae3c25a9a7, type: 3}
+  - {fileID: 8300000, guid: 88a302ace1c36e14fb744085dd4fd799, type: 3}
+  - {fileID: 8300000, guid: 63a3cd817400cf74eab30866892cfe64, type: 3}
+  - {fileID: 8300000, guid: cdbea3b00aa7e8e4aa86dc11d89304bf, type: 3}
+  - {fileID: 8300000, guid: cc185d3c19013d041ad6ccc0175109b9, type: 3}
+  - {fileID: 8300000, guid: fad4b6b5e60c42c4eb37c4f06ab80a23, type: 3}
+  - {fileID: 8300000, guid: 9f443d6dd924a9a4d9b99f660b5f15fd, type: 3}
+  - {fileID: 8300000, guid: 926a6bb67ae1d6c47b3daf3a813e5fb0, type: 3}
+  - {fileID: 8300000, guid: 4013bfc935445b24d85c67aede8942cb, type: 3}
+  subtitleArray:
+  - "\u201CHello Guardian-E27, Welcome to the training simulator.\u201D "
+  - "\u201CHere you will be prepared for your mission.\u201D "
+  - "\u201CWe will start by assessing your movement capabilities, please move to point
+    A\u201D"
+  - "\u201CExcellent.\u201D"
+  - "\u201CNow we will assess your combat capabilities.\u201D "
+  - "\u201CAttack the enemy drone coming toward you.\u201D"
+  - "\u201CSplendid.\u201D"
+  - "\u201CLet\u2019s see if you can handle more.\u201D"
+  - "\u201CDefeat the drones.\u201D "
+  - "\u201CLooks like you missed one. Defeat the final drone.\u201D"
+  - "\u201CIt seems like you have been damaged, here's a repair cube.\u201D"
+  - "\u201CAnalyzing performance...\u201D"
+  - "\u201COur analysis determines that you are sufficient for the mission.\u201D"
+  instructionsArray:
+  - 
+  - 
+  - 'Objective: Use the left thumstick to move to point "A"'
+  - 
+  - 
+  - 'Objective: Hold down the right index trigger and right hand trigger to use lightning.'
+  - 
+  - 
+  - 'Objective: Hold down the left index trigger and left hand trigger to use fire.'
+  - 'Objective: Defeat the last drone'
+  - 'Objective: Point at the repair cube with right index and hold down right hand
+    trigger to use repair cube'
+  - 
+  - Tutorial Complete.
+  drone: {fileID: 1328296214327976067, guid: 87ea763b9087e4bb08dca56936445d2e, type: 3}
+  player: {fileID: 906020005}
+  healthCube: {fileID: 2030433079185437544, guid: 169b129efa55a4f40a4bcff11a413f1f,
+    type: 3}
+  Instructions: {fileID: 1300745433}
+  Subtitles: {fileID: 722431881}
+--- !u!4 &1434243973
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1434243971}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 29.44881, y: 1.2401733, z: 24.27}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1434243974
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1434243971}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 0
+  MaxDistance: 38.8
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 1
+  BypassReverbZones: 1
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &1462685082 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4669234126623968, guid: 0242aa8515b4bc947a945a5c6df83ee9,
     type: 3}
   m_PrefabInstance: {fileID: 418288726}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b388ff4c8d1f3644a143b16d45403ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1570122698
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3120,7 +3276,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_grabbers:
-  - {fileID: 1508972316}
+  - {fileID: 0}
   - {fileID: 1316244704}
 --- !u!1001 &1815813843
 PrefabInstance:
@@ -3917,7 +4073,7 @@ PrefabInstance:
     - target: {fileID: 8929368150923996614, guid: 5ad4c1d6bf105904099697b29f428c1b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8929368150923996614, guid: 5ad4c1d6bf105904099697b29f428c1b,
         type: 3}
@@ -3993,6 +4149,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 8929368151851105625, guid: 5ad4c1d6bf105904099697b29f428c1b,
+        type: 3}
+      propertyPath: m_FontData.m_HorizontalOverflow
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8929368151851105630, guid: 5ad4c1d6bf105904099697b29f428c1b,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 475.13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ad4c1d6bf105904099697b29f428c1b, type: 3}

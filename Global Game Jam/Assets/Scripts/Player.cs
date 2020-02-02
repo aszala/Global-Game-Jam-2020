@@ -2,9 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
-{
-    // Start is called before the first frame update
+public class Player : MonoBehaviour {
     public int health;
     private int maxhealth;
 
@@ -15,19 +13,20 @@ public class Player : MonoBehaviour
         maxhealth = health;
     }
 
-    // Update is called once per frame
     void Update()
     {
 
     }
 
-    public void updateHealth(int deltaHealth)
+
+	public void updateHealth(int deltaHealth)
     {
         if (health + deltaHealth <= maxhealth)
         {
             health += deltaHealth;
         }
 
+		print(health);
       
     }
 
