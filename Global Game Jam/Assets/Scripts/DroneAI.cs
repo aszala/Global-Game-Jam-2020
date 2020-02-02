@@ -38,14 +38,7 @@ public class DroneAI : MonoBehaviour {
     public void takeDamage(int damage) {
         if (DroneHealth > 0) {
             DroneHealth -= damage;
-        } else {
-            isDead = true;
-            tutorialController.droneDeath();
-            
-            gameObject.GetComponent<Rigidbody>().useGravity = true;
-
-            StartCoroutine(DespawnDrone());
-        }
+        } 
     }
     
     IEnumerator DespawnDrone() {

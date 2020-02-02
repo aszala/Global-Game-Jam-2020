@@ -31,12 +31,12 @@ public class Tutorial : MonoBehaviour
 
     public Text Subtitles;
 
-    private bool spawnHealthCube = true;
+
 
     void Start()
     {
         currentInstruction = 0;
-        timeTillNextLine = 1f;
+        timeTillNextLine = 0f;
         audioSource = GetComponent<AudioSource>();
 
         StartCoroutine(playClip(currentInstruction));
@@ -82,10 +82,12 @@ public class Tutorial : MonoBehaviour
 
         }
         audioSource.clip = audioClips[index];
-        if (spawnHealthCube)
-        {
-            audioSource.Play();
-        }
+
+
+        audioSource.Play();
+
+
+
 
         Subtitles.text = subtitleArray[currentInstruction];
         Instructions.text = instructionsArray[currentInstruction];
@@ -129,6 +131,8 @@ public class Tutorial : MonoBehaviour
         }
         else if (currentInstruction == 10)
         {
+
+
             player.GetComponent<Player>().updateHealth(-1);
 
             setDroneCount(1);
@@ -137,37 +141,22 @@ public class Tutorial : MonoBehaviour
 
             A.transform.position = player.transform.position + new Vector3(6f, 1.5f, 6f);
 
+
             currentInstruction--;
+
+
+
+
         }
-        else if (currentInstruction == 10)
+        else if (currentInstruction == 11)
         {
 
-
-
-            if (player.GetComponent<Player>().health == 10)
-            {
-                audioSource.Play();
-                spawnHealthCube = true;
-                StartCoroutine(playClip(currentInstruction));
-
-            }
-            else
-            {
-
-                if (spawnHealthCube)
-                {
-                    GameObject C = Instantiate(healthCube);
-                    C.transform.position = transform.position;
-                    spawnHealthCube = false;
-
-                }
-                currentInstruction--;
-                print(currentInstruction);
-                StartCoroutine(playClip(currentInstruction));
+            GameObject C = Instantiate(healthCube);
+            C.transform.position = transform.position;
 
 
 
-            }
+
 
 
         }
@@ -176,6 +165,20 @@ public class Tutorial : MonoBehaviour
             StartCoroutine(playClip(currentInstruction));
 
         }
+
+
+
     }
 
+    public void healthCubeCollected()
+    {
+        print("healthCubeCollected");
+        StartCoroutine(playClip(currentInstruction));
+
+    }
 }
+
+
+
+
+
