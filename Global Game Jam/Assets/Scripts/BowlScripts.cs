@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 public class BowlScripts : MonoBehaviour
@@ -33,6 +34,7 @@ public class BowlScripts : MonoBehaviour
         numberofBowls = detectBowlTags.Length;
 
 
+
     }
 
     // Update is called once per frame
@@ -46,15 +48,16 @@ public class BowlScripts : MonoBehaviour
   
     public void placeOrbOnBowl()
     {
-        print(numberofOrbsPlaced);
         if (numberofOrbsPlaced < numberofBowls)
         {   
             
             if (addObject) {
                 
+                
 
-                Instantiate(energyOrbs, this.transform.position + new Vector3(0, 2, 0), this.transform.rotation);
+                GameObject a = Instantiate(energyOrbs, this.transform.position + new Vector3(0, 2, 0), this.transform.rotation);
                 addObject = false;
+                a.GetComponent<PlayerDistToThisOBJ>().enabled = false;
 
             } 
 
