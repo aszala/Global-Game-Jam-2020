@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Tutorial : MonoBehaviour
 {
@@ -25,7 +26,6 @@ public class Tutorial : MonoBehaviour
 
     public GameObject player;
 
-    public GameObject healthCube;
 
     public Text Instructions;
 
@@ -78,19 +78,34 @@ public class Tutorial : MonoBehaviour
         {
             audioSource.clip = audioClips[index - 1];
 
+
+
             yield return new WaitForSeconds(audioSource.clip.length + timeTillNextLine);
 
         }
-        audioSource.clip = audioClips[index];
+        if (audioClips.Length > currentInstruction)
+        {
+            audioSource.clip = audioClips[index];
+
+        }
+
+        if (currentInstruction == audioClips.Length)
+        {
+
+            SceneManager.LoadScene("Level 1");
+        }
+        else
+        {
+            audioSource.Play();
+            Subtitles.text = subtitleArray[currentInstruction];
+            Instructions.text = instructionsArray[currentInstruction];
 
 
-        audioSource.Play();
+        }
 
 
 
 
-        Subtitles.text = subtitleArray[currentInstruction];
-        Instructions.text = instructionsArray[currentInstruction];
 
         currentInstruction++;
 
@@ -142,40 +157,27 @@ public class Tutorial : MonoBehaviour
             A.transform.position = player.transform.position + new Vector3(6f, 1.5f, 6f);
 
 
+
             currentInstruction--;
-
-
-
-
-        }
-        else if (currentInstruction == 11)
-        {
-
-            GameObject C = Instantiate(healthCube);
-            C.transform.position = transform.position;
-
-
-
-
 
 
         }
         else
         {
+
+
             StartCoroutine(playClip(currentInstruction));
+
+
 
         }
 
 
 
-    }
-
-    public void healthCubeCollected()
-    {
-        print("healthCubeCollected");
-        StartCoroutine(playClip(currentInstruction));
 
     }
+
+
 }
 
 
