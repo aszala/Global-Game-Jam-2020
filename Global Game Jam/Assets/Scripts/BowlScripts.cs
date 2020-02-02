@@ -82,7 +82,6 @@ public class BowlScripts : MonoBehaviour
         yield return new WaitForSeconds(10);
         objectives.text = "";
 
-        Application.Quit();
 
 
 
