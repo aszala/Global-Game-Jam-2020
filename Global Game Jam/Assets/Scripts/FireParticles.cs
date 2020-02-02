@@ -18,6 +18,7 @@ public class FireParticles : MonoBehaviour
     }
 
     public void OnParticleCollision(GameObject other) {
+
         int collCount = PSystem.GetSafeCollisionEventSize();
  
         if (collCount > CollisionEvents.Length)
