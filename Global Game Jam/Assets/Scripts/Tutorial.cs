@@ -31,6 +31,8 @@ public class Tutorial : MonoBehaviour
 
     public Text Subtitles;
 
+    private bool spawnHealthCube = true;
+
     void Start()
     {
         currentInstruction = 0;
@@ -136,16 +138,33 @@ public class Tutorial : MonoBehaviour
         }
         else if (currentInstruction == 11)
         {
+            print("health is 10, currentInstruction is " + currentInstruction);
             currentInstruction--;
+            StartCoroutine(playClip(currentInstruction));
+            
 
-            GameObject C = Instantiate(healthCube);
-            C.transform.position = transform.position;
-
+            print(player.GetComponent<Player>().health);
             if (player.GetComponent<Player>().health == 10)
             {
-				currentInstruction = 12;
+
+                print("health is 10, currentInstruction is " + currentInstruction);
+                currentInstruction++;
+                StartCoroutine(playClip(currentInstruction));
+
+            }
+            else
+            {
+                if (spawnHealthCube)
+                {
+                    GameObject C = Instantiate(healthCube);
+                    C.transform.position = transform.position;
+                    spawnHealthCube = false;
+                }
+
                 StartCoroutine(playClip(currentInstruction));
             }
+
+
         }
         else
         {
