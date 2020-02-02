@@ -83,6 +83,8 @@ public class BowlScripts : MonoBehaviour
         objectives.text = "";
 
 
+
+
         // terminal pops up and completely destroys you - lasts for as long as the video and fade to black
         // Voice says congrats Guardian-e27, you have failed your objective, Initiating Guardian-e28
 
