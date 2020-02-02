@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -26,18 +27,21 @@ public class Player : MonoBehaviour
     void Update()
     {
         timeTracker += Time.deltaTime;
-        if (timeTracker > 3)
+        if (timeTracker > 100)
         {
             updateHealth(1);
-        } 
+        }
 
-        
-    }
+		if (health <= 0) {
+			SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+		}
+
+	}
 
 
     public void updateHealth(int deltaHealth)
     {
-        if (health + deltaHealth <= maxhealth && health >= 0)
+        if (health + deltaHealth <= maxhealth && health > 0)
         {
             health += deltaHealth;
 
@@ -60,12 +64,7 @@ public class Player : MonoBehaviour
 
             }
 
-
         }
-
-
-
-        
 
 
     }
